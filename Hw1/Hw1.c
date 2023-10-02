@@ -98,7 +98,7 @@ void dijkstra(int srcx, int srcy, int dstx, int dsty, int** maze, int size){
             route[i] = 3;
             now_y++;
         }
-        else printf("---------\nError\n--------\n");
+        // else printf("---------\nError\n--------\n");
     }
     for(int i = distance[dstx][dsty] - 1; i >= 0; i--){
         printf("%d", route[i]);
@@ -128,7 +128,7 @@ int main(){
     int src1[2], src2[2], dst1[2], dst2[2];
     scanf("%d %d %d %d", &src1[0], &src1[1], &src2[0], &src2[1]);
     scanf("%d %d %d %d", &dst1[0], &dst1[1], &dst2[0], &dst2[1]);
-    
+
     
     dijkstra(n - 1 - src1[1], src1[0], n - 1 - dst1[1], dst1[0], maze, n);
     /* need to move src2 to new space */
